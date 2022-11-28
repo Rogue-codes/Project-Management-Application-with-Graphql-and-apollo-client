@@ -1,13 +1,251 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Alfa+Slab+One&family=Alumni+Sans+Pinstripe&family=Chelsea+Market&family=Italianno&family=Kanit:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700;1,900&family=Lobster&family=Merriweather:wght@300;400;700;900&family=Montserrat:wght@800&family=Noto+Serif+Display&family=PT+Sans:wght@400;700&family=Pacifico&family=Poppins:wght@400;500;600;700;800;900&family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&family=Rubik+Bubbles&family=Rubik+Distressed&family=Spectral:wght@300;400;500;600;700;800&display=swap");
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+nav {
+  width: 100%;
+  height: 15vh;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2%;
+}
+nav h1 {
+  font-size: 2vw;
+  font-family: "Montserrat", sans-serif;
+}
+nav h1 span {
+  font-size: 1.2vw;
+  font-family: "Montserrat", sans-serif;
+}
+.home {
+  min-height: 100vh;
+}
+.delete {
+  color: red !important;
+}
+.spinner {
+  width: 100%;
+  height: 100vh;
+  border: 5px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+.btn {
+  width: 40% !important;
+}
+.add-client-input {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 5%;
+  height: 8vh;
+  padding: 2%;
+}
+.submit {
+  width: 30%;
+  height: 6vh;
+  border: none;
+  background: #085be0;
+  color: #fff;
+}
+.cancel {
+  width: 30%;
+  height: 6vh;
+  border: none;
+  background: red;
+  color: #fff;
+}
+.error {
+  color: red;
+  font-size: 1vw;
+  margin-left: 5%;
+}
+.parent {
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 5%;
+}
+.project-container {
+  width: 60%;
+  margin-left: 20%;
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  padding: 2% 1%;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5%;
+  overflow-x: auto;
+  margin-top: 2%;
+}
+.project-cards {
+  min-width: 50%;
+  min-height: 20vh;
+  padding: 2%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.project-cards h2 {
+  font-size: 1.2vw;
+  font-family: "Montserrat", sans-serif;
+}
+.project-cards p {
+  font-size: 1.2vw;
+  font-weight: 700;
+  font-family: "PT Sans", sans-serif;
+}
+.project-cards button {
+  padding: 2%;
+  width: 32%;
+  border: none;
+  border-radius: 3px;
+  font-weight: 800;
+  font-family: "PT Sans", sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background: #fff;
+}
+.project-card {
+  width: 40%;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  padding: 2%;
+  border-radius: 3px;
+  margin-top: 5%;
+  position: relative;
+}
+.project-card h2 {
+  font-size: 1.4vw;
+  font-weight: 800;
+  font-family: "Montserrat", sans-serif;
+}
+.project-card p {
+  font-size: 1.2vw;
+  font-weight: 700;
+  font-family: "PT Sans", sans-serif;
+}
+.project-card span {
+  font-size: 1.2vw;
+  font-weight: 700;
+  font-family: "PT Sans", sans-serif;
+}
+.mt-5 {
+  font-size: 1.2vw;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+}
+.list-group-item {
+  font-family: "PT Sans", sans-serif;
+  font-size: 1.2vw;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 5%;
+}
+.red {
+  color: red;
+}
+.orange {
+  color: orange;
+}
+.green {
+  color: green;
+}
+.project-card a {
+  position: absolute;
+  top: 5%;
+  left: 85%;
+  width: 12%;
+  border: none;
+  border-radius: 3px;
+  font-weight: 800;
+  font-family: "PT Sans", sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+}
+.add-button-container {
+  margin-top: 2%;
+  width: 30%;
+  margin-left: 20%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5%;
+}
+.add-project-input {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 5%;
+  padding: 2%;
+}
+.add-project-text {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 5%;
+  padding: 2%;
+}
+.update-delete-container {
+  width: 100%;
+  height: 8vh;
+  margin-top: 2%;
+  /* border: 5px solid #000; */
+  display: flex;
+  justify-content: flex-end;
+  gap: 5%;
+}
+.delete-btn {
+  width: 30%;
+  height: 6vh;
+  background: red;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2%;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.update-btn {
+  width: 30%;
+  height: 6vh;
+  background: rgb(19, 118, 239);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2%;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.no-project{
+  width: 60%;
+  margin-left: 20%;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+  align-items: center;
+}
+.no-project p{
+  font-size: 2vw;
+  margin-top: 3%;
+  font-family: "PT Sans", sans-serif;
+  color: red;
+  font-weight: 700;
 }
